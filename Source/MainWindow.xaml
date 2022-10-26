@@ -1,0 +1,33 @@
+﻿<Window x:Class="Source.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Source" xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid Name="grid">
+        <!--<Grid.Resources>
+            <SolidColorBrush x:Key="primaryBtnColor">Green</SolidColorBrush>
+            <sys:Double x:Key="btnHeight">70</sys:Double>
+        </Grid.Resources>-->
+
+
+        <!--<Viewbox MaxHeight="450" MaxWidth="450" StretchDirection="UpOnly" >
+            <Image Width="100" Height="100" Source="angel-white-wings.png"></Image>
+        </Viewbox>-->
+
+
+        <!--<StackPanel>
+            <Button Height="{StaticResource btnHeight}" Background="{DynamicResource primaryBtnColor}">Add</Button>
+            <Button Height="{DynamicResource btnHeight}" Background="{StaticResource secondaryBtnColor}">Edit</Button>
+            <Button Height="{DynamicResource btnHeight}" Background="{StaticResource secondaryBtnColor}">Save</Button>
+            <Button FontSize="42" Click="ChangeBackColor">Change color</Button>
+        </StackPanel>-->
+        
+        
+        
+        
+
+    </Grid>
+</Window>
