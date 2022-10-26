@@ -24,10 +24,76 @@
             <Button Height="{DynamicResource btnHeight}" Background="{StaticResource secondaryBtnColor}">Save</Button>
             <Button FontSize="42" Click="ChangeBackColor">Change color</Button>
         </StackPanel>-->
-        
-        
-        
-        
 
+
+        
+        
+        
+        <!--<StackPanel>
+            <Slider Name="sld" Maximum="100" Minimum="20" Height="20"></Slider>
+            <TextBlock FontSize="{Binding ElementName=sld, Path=Value}">Hello World</TextBlock>
+        </StackPanel>-->
+
+
+
+
+        <!--<StackPanel>
+            <Slider Value="60" Name="sld1" Maximum="100" Minimum="20" Height="20"></Slider>
+            <Slider Value="{Binding ElementName=sld1, Path=Value, Mode=Default}" Maximum="100" Minimum="20" Height="20" ></Slider>
+        </StackPanel>-->
+
+
+
+
+        <!--<StackPanel Width="300">
+            <TextBlock Height="40" FontSize="25" Text="{Binding SomeText}"></TextBlock>
+            <TextBlock Height="40" FontSize="25" Text="{Binding SomeText}"></TextBlock>
+            <Button Click="Button_Click" FontSize="27" >Show text</Button>
+        </StackPanel>-->
+
+
+
+
+        <!--<StackPanel Width="300">
+            <Label Foreground="DarkMagenta" FontSize="25" Content="Make"></Label>
+            <TextBlock FontSize="25" Text="{Binding Car.Make}"></TextBlock>
+
+            <Label Foreground="DarkMagenta" FontSize="25" Content="Model"></Label>
+            <TextBlock FontSize="25" Text="{Binding Car.Model}"></TextBlock>
+
+            <Label Foreground="DarkMagenta" FontSize="25" Content="Year"></Label>
+            <TextBlock FontSize="25" Text="{Binding Car.Year}"></TextBlock>
+        </StackPanel>-->
+
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+
+        <Slider VerticalAlignment="Center" Name="sld" Maximum="100" Minimum="20"></Slider>
+
+
+        <ListBox MouseDoubleClick="ListBox_MouseDoubleClick" 
+                 ItemsSource="{Binding Cars}"
+                 FontSize="{Binding ElementName=sld, Path=Value}"
+                 Grid.Row="1">
+            
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="10" FontSize="25" Text="{Binding Make}"></TextBlock>
+                        <TextBlock Margin="10" FontSize="25" Text="{Binding Model}"></TextBlock>
+                        <TextBlock Margin="10" FontSize="25" Text="{Binding Year}"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+
+        <Button Grid.Row="2" FontSize="36" Click="AddCar">Add car</Button>
     </Grid>
 </Window>
